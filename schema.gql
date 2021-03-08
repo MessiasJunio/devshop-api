@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type category {
+  id: String
+  name: String
+  slug: String
+}
+
+input CategoryCreateInput {
+  name: String!
+  slug: String!
+}
+
+input CategoryUpdateInput {
+  id: String!
+  name: String!
+  slug: String!
+}
+
+type Mutation {
+  createCategory(input: CategoryCreateInput!): category!
+  updateCategory(input: CategoryUpdateInput!): category!
+  deleteCategory(id: String!): Boolean!
+}
+
+type Query {
+  getAllCategories: [category!]!
+  getCategoryById(id: String!): category!
+}
