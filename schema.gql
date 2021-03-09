@@ -23,9 +23,36 @@ type Mutation {
   createCategory(input: CategoryCreateInput!): category!
   updateCategory(input: CategoryUpdateInput!): category!
   deleteCategory(id: String!): Boolean!
+  createProduct(input: ProductCreateInput!): Product!
+  updateProduct(input: ProductUpdateInput!): Product!
+  deleteProduct(id: String!): Boolean!
+}
+
+type Product {
+  id: String
+  name: String
+  description: String
+  slug: String
+}
+
+input ProductCreateInput {
+  name: String!
+  slug: String!
+  description: String!
+  category: String!
+}
+
+input ProductUpdateInput {
+  id: String!
+  name: String!
+  slug: String!
+  description: String!
+  category: String!
 }
 
 type Query {
   getAllCategories: [category!]!
   getCategoryById(id: String!): category!
+  getAllProducts: [Product!]!
+  getProductById(id: String!): Product!
 }

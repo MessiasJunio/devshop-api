@@ -1,4 +1,3 @@
-import { Entity } from 'typeorm'
 import { Category } from './category.entity'
 import { CategoryCreateInput } from './dto/category-create.input'
 
