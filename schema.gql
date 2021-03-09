@@ -33,6 +33,7 @@ type Product {
   name: String
   description: String
   slug: String
+  category: String
 }
 
 input ProductCreateInput {
