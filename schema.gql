@@ -54,6 +54,8 @@ input ProductUpdateInput {
 type Query {
   getAllCategories: [category!]!
   getCategoryById(id: String!): category!
+  getCategoryBySlug(slug: String!): category!
   getAllProducts: [Product!]!
   getProductById(id: String!): Product!
+  getProductBySlug(slug: String!): Product!
 }
